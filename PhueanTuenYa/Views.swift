@@ -1501,7 +1501,28 @@ struct SettingsView: View {
         }
     }
 
-    private func clearAll() { medications.forEach { context.delete($0) }; logs.forEach { context.delete($0) }; bp.forEach { context.delete($0) }; feelings.forEach { context.delete($0) }; appointments.forEach { context.delete($0) }; contacts.forEach { context.delete($0) }; saveContext(context); settingsScrollTarget = "settingsResult"; result = "ล้างข้อมูลทั้งหมดแล้ว" }
+    private func clearAll() {
+        MedicationNotificationService.cancelMedicationReminders(for: medications)
+        AppointmentNotificationService.cancelAppointmentReminders(for: appointments)
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        center.removeAllDeliveredNotifications()
+        if #available(iOS 16.0, *) {
+            center.setBadgeCount(0)
+        } else {
+            UIApplication.shared.applicationIconBadgeNumber = 0
+        }
+
+        medications.forEach { context.delete($0) }
+        logs.forEach { context.delete($0) }
+        bp.forEach { context.delete($0) }
+        feelings.forEach { context.delete($0) }
+        appointments.forEach { context.delete($0) }
+        contacts.forEach { context.delete($0) }
+        saveContext(context)
+        settingsScrollTarget = "settingsResult"
+        result = "ล้างข้อมูลทั้งหมดแล้ว และยกเลิกการแจ้งเตือนที่ตั้งไว้ทั้งหมด"
+    }
     private func testNotification() {
         MedicationNotificationService.scheduleTestNotification { message in
             settingsScrollTarget = "settingsResult"
