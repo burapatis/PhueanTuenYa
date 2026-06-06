@@ -242,6 +242,10 @@ struct MedicationView: View {
     @State private var medicationSaveScrollToken = 0
     @State private var medicationNotice = ""
 
+    private var todayLogs: [MedicationLogItem] {
+        logs.filter { Calendar.current.isDateInToday($0.loggedAt) }
+    }
+
     let names = ["ยาความดัน", "ยาเบาหวาน", "ยาลดไขมัน", "ยาบำรุง", "อื่น ๆ"]
     let forms = ["เม็ด", "แคปซูล", "น้ำ", "หยอด", "ฉีด", "อื่น ๆ"]
     let dosages = ["1/4 เม็ด", "ครึ่งเม็ด", "1 เม็ด", "2 เม็ด", "1 ช้อนชา", "5 มล.", "อื่น ๆ"]
@@ -355,9 +359,9 @@ struct MedicationView: View {
                     statusButton("ข้าม", .appOrange)
                     statusButton("เตือนอีก 10 นาที", .appBlue)
                 }
-                if !logs.isEmpty {
+                if !todayLogs.isEmpty {
                     Text("ประวัติกินยาวันนี้").font(.headline.weight(.heavy))
-                    ForEach(logs) { log in
+                    ForEach(todayLogs) { log in
                         ListRowCard {
                             HStack {
                                 VStack(alignment: .leading) {
@@ -379,8 +383,20 @@ struct MedicationView: View {
             guard selectedMedName != "ยังไม่มีรายการยา", !selectedMedName.isEmpty else { return }
             context.insert(MedicationLogItem(medicationName: selectedMedName, status: text))
             saveContext(context)
-            medicationNotice = "บันทึกสถานะ ‘\(text)’ ของ \(selectedMedName) แล้ว"
-            medicationSaveScrollToken += 1
+            if text == "เตือนอีก 10 นาที" {
+                let med = medications.first(where: { $0.name == selectedMedName })
+                MedicationNotificationService.scheduleSnoozeReminder(
+                    medicationName: selectedMedName,
+                    dosage: med?.dosage ?? "",
+                    instruction: med?.instruction ?? ""
+                ) { message in
+                    medicationNotice = message
+                    medicationSaveScrollToken += 1
+                }
+            } else {
+                medicationNotice = "บันทึกสถานะ ‘\(text)’ ของ \(selectedMedName) แล้ว"
+                medicationSaveScrollToken += 1
+            }
         }
         .font(.subheadline.weight(.heavy))
         .padding(.vertical, 11)
@@ -501,6 +517,7 @@ struct BloodPressureView: View {
     @State private var diastolic = 80
     @State private var pulse = 72
     @State private var measuredAt = Date()
+    @State private var note = ""
     @State private var deleteTarget: BloodPressureItem?
     @State private var bpNotice = ""
     @State private var bpSaveScrollToken = 0
@@ -560,8 +577,6 @@ struct BloodPressureView: View {
                     }
 
                     bpForm.id("form")
-                    Text("แอพนี้ไม่ใช่อุปกรณ์การแพทย์ เป็นเพียงการแสดงสถิติตามตัวเลขที่ท่านบันทึกไว้")
-                        .font(.footnote.weight(.semibold)).foregroundStyle(Color.appSubtext)
                 }
                 .onChange(of: records.count) { _, _ in withAnimation { proxy.scrollTo("latest", anchor: .top) } }
                 .onChange(of: bpSaveScrollToken) { _, _ in withAnimation { proxy.scrollTo("latest", anchor: .top) } }
@@ -592,20 +607,22 @@ struct BloodPressureView: View {
                     NumberStepperRow(title: "DIA", value: $diastolic, range: 40...140)
                     NumberStepperRow(title: "ชีพจร", value: $pulse, range: 40...140)
                     DatePicker("เวลาที่วัด", selection: $measuredAt, displayedComponents: [.date, .hourAndMinute]).font(.headline)
+                    OtherTextField(placeholder: "หมายเหตุ (ถ้ามี)", text: $note)
                     PrimaryActionButton(title: editing == nil ? "บันทึกความดัน" : "บันทึกการแก้ไขความดัน", color: .appBlue) { saveBP() }.id("saveButton")
                 }
             }
         }
     }
 
-    private func beginEdit(_ item: BloodPressureItem) { editing = item; systolic = item.systolic; diastolic = item.diastolic; pulse = item.pulse; measuredAt = item.measuredAt; showForm = true }
+    private func beginEdit(_ item: BloodPressureItem) { editing = item; systolic = item.systolic; diastolic = item.diastolic; pulse = item.pulse; measuredAt = item.measuredAt; note = item.note; showForm = true }
     private func saveBP() {
         let isEditing = editing != nil
-        if let editing { editing.systolic = systolic; editing.diastolic = diastolic; editing.pulse = pulse; editing.measuredAt = measuredAt; editing.updatedAt = Date() }
-        else { context.insert(BloodPressureItem(systolic: systolic, diastolic: diastolic, pulse: pulse, measuredAt: measuredAt)) }
+        if let editing { editing.systolic = systolic; editing.diastolic = diastolic; editing.pulse = pulse; editing.measuredAt = measuredAt; editing.note = note; editing.updatedAt = Date() }
+        else { context.insert(BloodPressureItem(systolic: systolic, diastolic: diastolic, pulse: pulse, measuredAt: measuredAt, note: note)) }
         saveContext(context)
-        bpNotice = isEditing ? "แก้ไขผลวัดความดันแล้ว: \(systolic)/\(diastolic) mmHg • ชีพจร \(pulse)" : "บันทึกผลวัดความดันแล้ว: \(systolic)/\(diastolic) mmHg • ชีพจร \(pulse)"
-        editing = nil; showForm = false; bpSaveScrollToken += 1
+        let noteSuffix = note.isEmpty ? "" : " • หมายเหตุ: \(note)"
+        bpNotice = isEditing ? "แก้ไขผลวัดความดันแล้ว: \(systolic)/\(diastolic) mmHg • ชีพจร \(pulse)\(noteSuffix)" : "บันทึกผลวัดความดันแล้ว: \(systolic)/\(diastolic) mmHg • ชีพจร \(pulse)\(noteSuffix)"
+        editing = nil; note = ""; showForm = false; bpSaveScrollToken += 1
     }
 }
 
@@ -1358,11 +1375,12 @@ struct SettingsView: View {
         let pageRect = CGRect(x: 0, y: 0, width: 595, height: 842)
         let renderer = UIGraphicsPDFRenderer(bounds: pageRect)
 
-        let recentMeds = Array(medications.prefix(6))
-        let recentLogs = Array(logs.prefix(8))
-        let recentBP = Array(bp.prefix(8))
-        let recentFeelings = Array(feelings.prefix(8))
-        let recentAppointments = Array(appointments.prefix(8))
+        let cutoff = last30DaysStart()
+        let recentMeds = medications
+        let recentLogs = logs.filter { isWithinLast30Days($0.loggedAt) }
+        let recentBP = bp.filter { isWithinLast30Days($0.measuredAt) }
+        let recentFeelings = feelings.filter { isWithinLast30Days($0.recordedAt) }
+        let recentAppointments = appointments.filter { isWithinLast30Days($0.dateTime) }
         let primaryContact = contacts.first(where: { $0.isPrimary }) ?? contacts.first
 
         do {
@@ -1428,6 +1446,7 @@ struct SettingsView: View {
                 beginPage()
                 drawText("เพื่อนเตือนยา", font: titleFont, color: UIColor(red: 0.08, green: 0.18, blue: 0.32, alpha: 1), spacing: 2)
                 drawText("รายงานสรุปสุขภาพ 30 วัน", font: sectionFont, color: .darkGray, spacing: 8)
+                drawText("ช่วงข้อมูล: \(shortDateTime(cutoff)) ถึง \(shortDateTime(Date()))", font: bodyFont, color: .darkGray, spacing: 4)
                 drawText("วันที่สร้างรายงาน: \(shortDateTime(Date()))", font: bodyFont, color: .darkGray, spacing: 10)
 
                 drawText("⚠️ รายงานนี้สร้างจากข้อมูลที่ผู้ใช้บันทึกไว้เองในเครื่องเท่านั้น ไม่ใช่การวิเคราะห์ วินิจฉัย หรือคำแนะนำทางการแพทย์", font: subheadFont, color: .black, spacing: 8)
@@ -1435,11 +1454,11 @@ struct SettingsView: View {
                 drawDivider()
 
                 drawSection("1) สรุปภาพรวม", rows: [
-                    "รายการยา: \(medications.count) รายการ",
-                    "ประวัติกินยา: \(logs.count) รายการ",
-                    "บันทึกความดัน: \(bp.count) รายการ",
-                    "บันทึกความรู้สึกและอาการ: \(feelings.count) รายการ",
-                    "นัดหมายสุขภาพ: \(appointments.count) รายการ",
+                    "รายการยาปัจจุบัน: \(medications.count) รายการ",
+                    "ประวัติกินยา (30 วัน): \(recentLogs.count) รายการ",
+                    "บันทึกความดัน (30 วัน): \(recentBP.count) รายการ",
+                    "บันทึกความรู้สึกและอาการ (30 วัน): \(recentFeelings.count) รายการ",
+                    "นัดหมายสุขภาพ (30 วัน): \(recentAppointments.count) รายการ",
                     "ผู้ติดต่อ SOS: \(contacts.count) รายการ",
                     "ผู้ติดต่อหลัก: \(primaryContact?.name ?? "ยังไม่มี")"
                 ])
@@ -1507,11 +1526,7 @@ struct SettingsView: View {
         let center = UNUserNotificationCenter.current()
         center.removeAllPendingNotificationRequests()
         center.removeAllDeliveredNotifications()
-        if #available(iOS 16.0, *) {
-            center.setBadgeCount(0)
-        } else {
-            UIApplication.shared.applicationIconBadgeNumber = 0
-        }
+        resetAppBadge()
 
         medications.forEach { context.delete($0) }
         logs.forEach { context.delete($0) }
@@ -1697,6 +1712,36 @@ final class MedicationNotificationService {
     static func cancelMedicationReminders(for medications: [MedicationItem]) {
         let identifiers = medications.compactMap { $0.notificationIdentifier }
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+    }
+
+    static func scheduleSnoozeReminder(medicationName: String, dosage: String, instruction: String, completion: @escaping (String) -> Void) {
+        requestAuthorization { granted in
+            guard granted else {
+                completion("ยังไม่ได้อนุญาตการแจ้งเตือน หากเคยกดไม่อนุญาต ให้เปิด Settings ของ iPhone แล้วอนุญาตการแจ้งเตือนสำหรับแอปนี้")
+                return
+            }
+
+            let content = UNMutableNotificationContent()
+            content.title = "เพื่อนเตือนยา"
+            let detail = [medicationName, dosage, instruction].filter { !$0.isEmpty }.joined(separator: " • ")
+            content.body = "เตือนอีกครั้ง: \(detail)"
+            content.sound = .default
+            content.badge = 1
+
+            let identifier = "medication-snooze-" + UUID().uuidString
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 600, repeats: false)
+            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+
+            UNUserNotificationCenter.current().add(request) { error in
+                DispatchQueue.main.async {
+                    if let error {
+                        completion("ตั้งเตือนอีก 10 นาทีไม่สำเร็จ: \(error.localizedDescription)")
+                    } else {
+                        completion("บันทึกสถานะ ‘เตือนอีก 10 นาที’ แล้ว และจะแจ้งเตือน \(medicationName) อีกครั้งใน 10 นาที")
+                    }
+                }
+            }
+        }
     }
 
     static func scheduleTestNotification(completion: @escaping (String) -> Void) {

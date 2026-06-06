@@ -455,6 +455,18 @@ func todayText() -> String {
     return formatter.string(from: Date())
 }
 
+func last30DaysStart(from referenceDate: Date = Date()) -> Date {
+    Calendar.current.date(byAdding: .day, value: -30, to: referenceDate) ?? referenceDate
+}
+
+func isWithinLast30Days(_ date: Date, from referenceDate: Date = Date()) -> Bool {
+    date >= last30DaysStart(from: referenceDate)
+}
+
+func resetAppBadge() {
+    UNUserNotificationCenter.current().setBadgeCount(0)
+}
+
 
 struct CompactCheckRow: View {
     let text: String
