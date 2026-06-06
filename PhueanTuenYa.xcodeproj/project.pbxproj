@@ -10,23 +10,67 @@
 		B001 /* PhueanTuenYaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001 /* PhueanTuenYaApp.swift */; };
 		B002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002 /* ContentView.swift */; };
 		B003 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003 /* Components.swift */; };
-		B004 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = A004 /* Views.swift */; };
 		B005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A005 /* Assets.xcassets */; };
 		B006 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A006 /* PrivacyInfo.xcprivacy */; };
+		B007 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007 /* HomeView.swift */; };
+		B008 /* MedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008 /* MedicationView.swift */; };
+		B009 /* BloodPressureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009 /* BloodPressureView.swift */; };
+		B010 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A010 /* FeelingView.swift */; };
+		B011 /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011 /* AppointmentView.swift */; };
+		B012 /* SOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A012 /* SOSView.swift */; };
+		B013 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A013 /* SettingsView.swift */; };
+		B014 /* ModuleScaffold.swift in Sources */ = {isa = PBXBuildFile; fileRef = A014 /* ModuleScaffold.swift */; };
+		B015 /* MedicationNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A015 /* MedicationNotificationService.swift */; };
+		B016 /* AppointmentNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A016 /* AppointmentNotificationService.swift */; };
+		B017 /* AppHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017 /* AppHelpers.swift */; };
+		B018 /* ExportFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018 /* ExportFormatting.swift */; };
+		B019 /* NotificationLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019 /* NotificationLogic.swift */; };
+		B020 /* PhueanTuenYaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A020 /* PhueanTuenYaTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CP001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PROJ001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T001;
+			remoteInfo = PhueanTuenYa;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A001 /* PhueanTuenYaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhueanTuenYaApp.swift; sourceTree = "<group>"; };
 		A002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A003 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
-		A004 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		A005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A006 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A007 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A008 /* MedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationView.swift; sourceTree = "<group>"; };
+		A009 /* BloodPressureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureView.swift; sourceTree = "<group>"; };
+		A010 /* FeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingView.swift; sourceTree = "<group>"; };
+		A011 /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
+		A012 /* SOSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSView.swift; sourceTree = "<group>"; };
+		A013 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A014 /* ModuleScaffold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleScaffold.swift; sourceTree = "<group>"; };
+		A015 /* MedicationNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationNotificationService.swift; sourceTree = "<group>"; };
+		A016 /* AppointmentNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentNotificationService.swift; sourceTree = "<group>"; };
+		A017 /* AppHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelpers.swift; sourceTree = "<group>"; };
+		A018 /* ExportFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportFormatting.swift; sourceTree = "<group>"; };
+		A019 /* NotificationLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationLogic.swift; sourceTree = "<group>"; };
+		A020 /* PhueanTuenYaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhueanTuenYaTests.swift; sourceTree = "<group>"; };
 		P002 /* PhueanTuenYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhueanTuenYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		P003 /* PhueanTuenYaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhueanTuenYaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F002 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				C002 /* PhueanTuenYa */,
+				C003 /* PhueanTuenYaTests */,
 				P001 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,17 +95,62 @@
 				A001 /* PhueanTuenYaApp.swift */,
 				A002 /* ContentView.swift */,
 				A003 /* Components.swift */,
-				A004 /* Views.swift */,
+				C004 /* Views */,
+				C005 /* Services */,
+				C006 /* Support */,
 				A005 /* Assets.xcassets */,
 				A006 /* PrivacyInfo.xcprivacy */,
 			);
 			path = PhueanTuenYa;
 			sourceTree = "<group>";
 		};
+		C003 /* PhueanTuenYaTests */ = {
+			isa = PBXGroup;
+			children = (
+				A020 /* PhueanTuenYaTests.swift */,
+			);
+			path = PhueanTuenYaTests;
+			sourceTree = "<group>";
+		};
+		C004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A007 /* HomeView.swift */,
+				A008 /* MedicationView.swift */,
+				A009 /* BloodPressureView.swift */,
+				A010 /* FeelingView.swift */,
+				A011 /* AppointmentView.swift */,
+				A012 /* SOSView.swift */,
+				A013 /* SettingsView.swift */,
+				A014 /* ModuleScaffold.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A015 /* MedicationNotificationService.swift */,
+				A016 /* AppointmentNotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C006 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A017 /* AppHelpers.swift */,
+				A018 /* ExportFormatting.swift */,
+				A019 /* NotificationLogic.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		P001 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				P002 /* PhueanTuenYa.app */,
+				P003 /* PhueanTuenYaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +175,23 @@
 			productReference = P002 /* PhueanTuenYa.app */;
 			productType = "com.apple.product-type.application";
 		};
+		T002 /* PhueanTuenYaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CLT002 /* Build configuration list for PBXNativeTarget "PhueanTuenYaTests" */;
+			buildPhases = (
+				S002 /* Sources */,
+				F002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D001 /* PBXTargetDependency */,
+			);
+			name = PhueanTuenYaTests;
+			productName = PhueanTuenYaTests;
+			productReference = P003 /* PhueanTuenYaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,6 +204,10 @@
 				TargetAttributes = {
 					T001 = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					T002 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = T001;
 					};
 				};
 			};
@@ -114,6 +225,7 @@
 			projectRoot = "";
 			targets = (
 				T001 /* PhueanTuenYa */,
+				T002 /* PhueanTuenYaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -138,11 +250,39 @@
 				B001 /* PhueanTuenYaApp.swift in Sources */,
 				B002 /* ContentView.swift in Sources */,
 				B003 /* Components.swift in Sources */,
-				B004 /* Views.swift in Sources */,
+				B007 /* HomeView.swift in Sources */,
+				B008 /* MedicationView.swift in Sources */,
+				B009 /* BloodPressureView.swift in Sources */,
+				B010 /* FeelingView.swift in Sources */,
+				B011 /* AppointmentView.swift in Sources */,
+				B012 /* SOSView.swift in Sources */,
+				B013 /* SettingsView.swift in Sources */,
+				B014 /* ModuleScaffold.swift in Sources */,
+				B015 /* MedicationNotificationService.swift in Sources */,
+				B016 /* AppointmentNotificationService.swift in Sources */,
+				B017 /* AppHelpers.swift in Sources */,
+				B018 /* ExportFormatting.swift in Sources */,
+				B019 /* NotificationLogic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B020 /* PhueanTuenYaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T001 /* PhueanTuenYa */;
+			targetProxy = CP001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DBGPROJ /* Debug */ = {
@@ -217,7 +357,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "เพื่อนเตือนยา";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -229,6 +369,25 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBGTEST /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 66;
+				DEVELOPMENT_TEAM = 4BFSP99G9W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.6.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phueanteuanya.PhueanTuenYaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhueanTuenYa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhueanTuenYa";
 			};
 			name = Debug;
 		};
@@ -297,7 +456,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "เพื่อนเตือนยา";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,6 +468,25 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		RELTEST /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 66;
+				DEVELOPMENT_TEAM = 4BFSP99G9W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.6.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phueanteuanya.PhueanTuenYaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhueanTuenYa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhueanTuenYa";
 			};
 			name = Release;
 		};
@@ -329,6 +507,15 @@
 			buildConfigurations = (
 				DBGTAR /* Debug */,
 				RELTAR /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CLT002 /* Build configuration list for PBXNativeTarget "PhueanTuenYaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBGTEST /* Debug */,
+				RELTEST /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

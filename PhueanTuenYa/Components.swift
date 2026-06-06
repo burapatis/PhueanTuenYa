@@ -6,6 +6,7 @@ import UserNotifications
 
 @Model
 final class MedicationItem {
+    var localID: UUID?
     var name: String
     var form: String
     var dosage: String
@@ -16,6 +17,7 @@ final class MedicationItem {
     var updatedAt: Date
 
     init(name: String, form: String, dosage: String, instruction: String, timeText: String, createdAt: Date = Date()) {
+        self.localID = UUID()
         self.name = name
         self.form = form
         self.dosage = dosage
@@ -27,16 +29,26 @@ final class MedicationItem {
     }
 
     var summary: String { "\(name) • \(dosage) • \(timeText)" }
+    var selectionLabel: String { "\(name) • \(dosage) • \(timeText)" }
+
+    func ensureLocalID() -> UUID {
+        if let localID { return localID }
+        let newID = UUID()
+        self.localID = newID
+        return newID
+    }
 }
 
 @Model
 final class MedicationLogItem {
     var medicationName: String
+    var medicationLocalID: UUID?
     var status: String
     var loggedAt: Date
 
-    init(medicationName: String, status: String, loggedAt: Date = Date()) {
+    init(medicationName: String, status: String, medicationLocalID: UUID? = nil, loggedAt: Date = Date()) {
         self.medicationName = medicationName
+        self.medicationLocalID = medicationLocalID
         self.status = status
         self.loggedAt = loggedAt
     }
