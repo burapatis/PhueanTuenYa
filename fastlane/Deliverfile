@@ -1,0 +1,7 @@
+app_identifier "com.phueanteuanya.PhueanTuenYa"
+username "burapatis@gmail.com"
+team_id "4BFSP99G9W"
+skip_binary_upload true
+skip_metadata true
+skip_app_version_update true
+force true

@@ -1,0 +1,147 @@
+2026-06-06 14:10:53 +0000 [MT] Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0xa7db71b00; archive(resolved)="<IDEArchive: 0xa7dbd4150>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team(resolved)="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	Chain (15, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0xa7db71b00; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionProcessingPipelineContext: 0xa7db70c00; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdcaf80; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdcaa80; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdca800; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdca580; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdca300; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdca080; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdc9e00; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdc8f00; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdc8c80; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdc8a00; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="<IDEProvisioningBasicTeam: 0xa7d48f100; teamID='4BFSP99G9W', teamName='(null)'>">
+	<IDEDistributionContext: 0xa7fdc8780; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="(null)">
+	<IDEDistributionContext: 0xa7fdc8000; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0xa7da5f2d0>", team="(null)">
+	<IDEDistributionContext: 0x1017e2870; archive = "<IDEArchive: 0xa7dbd4150>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0xa7db71b00>
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionCreateDestRootStep
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionCopyItemStep
+2026-06-06 14:10:53 +0000 [MT] Running /usr/bin/ditto '-V' '/Users/com/PhueanTuenYa_iOS_v0_6_6_XcodeProject/build/PhueanTuenYa.xcarchive/Products/Applications/PhueanTuenYa.app' '/var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Root/Payload/PhueanTuenYa.app'
+2026-06-06 14:10:53 +0000  >>> Copying /Users/com/PhueanTuenYa_iOS_v0_6_6_XcodeProject/build/PhueanTuenYa.xcarchive/Products/Applications/PhueanTuenYa.app 
+2026-06-06 14:10:53 +0000  copying file ./_CodeSignature/CodeResources ... 
+2026-06-06 14:10:53 +0000  3003 bytes for ./_CodeSignature/CodeResources
+2026-06-06 14:10:53 +0000  copying file ./PhueanTuenYa ... 
+2026-06-06 14:10:53 +0000  907056 bytes for ./PhueanTuenYa
+2026-06-06 14:10:53 +0000  copying file ./AppIcon60x60@2x.png ... 
+2026-06-06 14:10:53 +0000  22993 bytes for ./AppIcon60x60@2x.png
+2026-06-06 14:10:53 +0000  copying file ./Assets.car ... 
+2026-06-06 14:10:53 +0000  2448856 bytes for ./Assets.car
+2026-06-06 14:10:53 +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+2026-06-06 14:10:53 +0000  33405 bytes for ./AppIcon76x76@2x~ipad.png
+2026-06-06 14:10:53 +0000  copying file ./PrivacyInfo.xcprivacy ... 
+2026-06-06 14:10:53 +0000  815 bytes for ./PrivacyInfo.xcprivacy
+2026-06-06 14:10:53 +0000  copying file ./embedded.mobileprovision ... 
+2026-06-06 14:10:53 +0000  12394 bytes for ./embedded.mobileprovision
+2026-06-06 14:10:53 +0000  copying file ./Info.plist ... 
+2026-06-06 14:10:53 +0000  1577 bytes for ./Info.plist
+2026-06-06 14:10:53 +0000  copying file ./PkgInfo ... 
+2026-06-06 14:10:53 +0000  8 bytes for ./PkgInfo
+2026-06-06 14:10:53 +0000 [MT] /usr/bin/ditto exited with 0
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionEmbedProfileStep
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionInfoPlistStep
+2026-06-06 14:10:53 +0000 [MT] Skipping setting DTXcodeBuildDistribution because toolsBuildVersionName was nil.
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionItemRemovalStep
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionAppThinningPlistStep
+2026-06-06 14:10:53 +0000 [MT] Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionSymbolsStep
+2026-06-06 14:10:53 +0000 [MT] Writing /var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Symbols/E2171B8E-A2C7-38E0-AAF8-D99F51DF9FA4.symbols
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionCopyAppleProvidedContentStep
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionAppThinningStep
+2026-06-06 14:10:53 +0000 [MT] Skipping step: IDEDistributionAppThinningStep because it said so
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionArchThinningStep
+2026-06-06 14:10:53 +0000 [MT] Archs to thin for item /Users/com/PhueanTuenYa_iOS_v0_6_6_XcodeProject/build/PhueanTuenYa.xcarchive/Products/Applications/PhueanTuenYa.app are []
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionODRStep
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionStripXattrsStep
+2026-06-06 14:10:53 +0000 [MT] Skipping stripping extended attributes because the codesign step will strip them.
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionCodesignStep
+2026-06-06 14:10:53 +0000 [MT] Entitlements for <IDEDistributionItem: 0xa7dbb3720; bundleID='com.phueanteuanya.PhueanTuenYa', path='<DVTFilePath:0xa7dbd41c0:'/Users/com/PhueanTuenYa_iOS_v0_6_6_XcodeProject/build/PhueanTuenYa.xcarchive/Products/Applications/PhueanTuenYa.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0xa7dbb2940; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0xa7fdbc780; name='Apple Development: burapatis@gmail.com (38RNSQWS27)', hash='0D230334594E9A85402679C711139655F4B62388', serialNumber='5853A4C5E55308640E35E9E820381B56', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-24 09:30:49 +0000''>', entitlements='{
+    "application-identifier" = "4BFSP99G9W.com.phueanteuanya.PhueanTuenYa";
+    "com.apple.developer.team-identifier" = 4BFSP99G9W;
+    "get-task-allow" = 1;
+}', teamID='4BFSP99G9W', identifier='com.phueanteuanya.PhueanTuenYa', executablePath='<DVTFilePath:0xa7dbb2c40:'/Users/com/PhueanTuenYa_iOS_v0_6_6_XcodeProject/build/PhueanTuenYa.xcarchive/Products/Applications/PhueanTuenYa.app/PhueanTuenYa'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "4BFSP99G9W.com.phueanteuanya.PhueanTuenYa";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = 4BFSP99G9W;
+    "get-task-allow" = 0;
+}
+2026-06-06 14:10:53 +0000 [MT] Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2026-06-06 14:10:53 +0000 [MT] Entitlements for <IDEDistributionItem: 0xa7dbb3720; bundleID='com.phueanteuanya.PhueanTuenYa', path='<DVTFilePath:0xa7dbd41c0:'/Users/com/PhueanTuenYa_iOS_v0_6_6_XcodeProject/build/PhueanTuenYa.xcarchive/Products/Applications/PhueanTuenYa.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0xa7dbb2940; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0xa7fdbc9c0; name='Apple Development: burapatis@gmail.com (38RNSQWS27)', hash='0D230334594E9A85402679C711139655F4B62388', serialNumber='5853A4C5E55308640E35E9E820381B56', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-24 09:30:49 +0000''>', entitlements='{
+    "application-identifier" = "4BFSP99G9W.com.phueanteuanya.PhueanTuenYa";
+    "com.apple.developer.team-identifier" = 4BFSP99G9W;
+    "get-task-allow" = 1;
+}', teamID='4BFSP99G9W', identifier='com.phueanteuanya.PhueanTuenYa', executablePath='<DVTFilePath:0xa7dbb2c40:'/Users/com/PhueanTuenYa_iOS_v0_6_6_XcodeProject/build/PhueanTuenYa.xcarchive/Products/Applications/PhueanTuenYa.app/PhueanTuenYa'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "4BFSP99G9W.com.phueanteuanya.PhueanTuenYa";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = 4BFSP99G9W;
+    "get-task-allow" = 0;
+}
+2026-06-06 14:10:53 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0xa7dbb3720; bundleID='com.phueanteuanya.PhueanTuenYa', path='<DVTFilePath:0xa7dbd41c0:'/Users/com/PhueanTuenYa_iOS_v0_6_6_XcodeProject/build/PhueanTuenYa.xcarchive/Products/Applications/PhueanTuenYa.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0xa7dbb2940; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0xa7fdbc9c0; name='Apple Development: burapatis@gmail.com (38RNSQWS27)', hash='0D230334594E9A85402679C711139655F4B62388', serialNumber='5853A4C5E55308640E35E9E820381B56', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-05-24 09:30:49 +0000''>', entitlements='{
+    "application-identifier" = "4BFSP99G9W.com.phueanteuanya.PhueanTuenYa";
+    "com.apple.developer.team-identifier" = 4BFSP99G9W;
+    "get-task-allow" = 1;
+}', teamID='4BFSP99G9W', identifier='com.phueanteuanya.PhueanTuenYa', executablePath='<DVTFilePath:0xa7dbb2c40:'/Users/com/PhueanTuenYa_iOS_v0_6_6_XcodeProject/build/PhueanTuenYa.xcarchive/Products/Applications/PhueanTuenYa.app/PhueanTuenYa'>', hardenedRuntime='0'>'> to: /var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/entitlements~~~iyviLL
+2026-06-06 14:10:53 +0000 [MT] invoking codesign: <NSConcreteTask: 0xa7d77b0c0; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    AA1F7B08E1F03DFC6437AEBB7E2AC4A64A14297D,
+    "--entitlements",
+    "/var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/entitlements~~~iyviLL",
+    "--preserve-metadata=identifier,flags,runtime,launch-constraints,library-constraints",
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Root/Payload/PhueanTuenYa.app"
+)'>
+2026-06-06 14:10:53 +0000 [MT] codesign output: /var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Root/Payload/PhueanTuenYa.app: replacing existing signature
+/var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Root/Payload/PhueanTuenYa.app: signed app bundle with Mach-O thin (arm64) [com.phueanteuanya.PhueanTuenYa]
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionZipODRItemStep
+2026-06-06 14:10:53 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionCreateIPAStep
+2026-06-06 14:10:53 +0000 [MT] Running /usr/bin/rsync '-8aPhhE' '/var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Symbols' '--link-dest' '/var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4' '/var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Root'
+2026-06-06 14:10:53 +0000  Symbols/
+._Symbols
+            163 170%    2.35MB/s   00:00:00 (xfer#1, to-check=0/4)
+2026-06-06 14:10:53 +0000  Symbols/E2171B8E-A2C7-38E0-AAF8-D99F51DF9FA4.symbols
+Symbols/._E2171B8E-A2C7-38E0-AAF8-D99F51DF9FA4.symbols
+            163   0%  282.78KB/s   00:00:00 (xfer#2, to-check=2/4)
+2026-06-06 14:10:53 +0000 [MT] /usr/bin/rsync exited with 0
+2026-06-06 14:10:53 +0000 [MT] Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Root' '/var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Packages/PhueanTuenYa.ipa'
+2026-06-06 14:10:53 +0000  >>> Copying /var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Root 
+2026-06-06 14:10:53 +0000  copying file ./Payload/PhueanTuenYa.app/_CodeSignature/CodeResources ... 
+2026-06-06 14:10:53 +0000  3003 bytes for ./Payload/PhueanTuenYa.app/_CodeSignature/CodeResources
+2026-06-06 14:10:53 +0000  copying file ./Payload/PhueanTuenYa.app/PhueanTuenYa ... 
+2026-06-06 14:10:53 +0000  907120 bytes for ./Payload/PhueanTuenYa.app/PhueanTuenYa
+2026-06-06 14:10:53 +0000  copying file ./Payload/PhueanTuenYa.app/AppIcon60x60@2x.png ... 
+2026-06-06 14:10:53 +0000  22993 bytes for ./Payload/PhueanTuenYa.app/AppIcon60x60@2x.png
+2026-06-06 14:10:53 +0000  copying file ./Payload/PhueanTuenYa.app/Assets.car ... 
+2026-06-06 14:10:53 +0000  2448856 bytes for ./Payload/PhueanTuenYa.app/Assets.car
+2026-06-06 14:10:53 +0000  copying file ./Payload/PhueanTuenYa.app/AppIcon76x76@2x~ipad.png ... 
+2026-06-06 14:10:53 +0000  33405 bytes for ./Payload/PhueanTuenYa.app/AppIcon76x76@2x~ipad.png
+2026-06-06 14:10:53 +0000  copying file ./Payload/PhueanTuenYa.app/PrivacyInfo.xcprivacy ... 
+2026-06-06 14:10:53 +0000  815 bytes for ./Payload/PhueanTuenYa.app/PrivacyInfo.xcprivacy
+2026-06-06 14:10:53 +0000  copying file ./Payload/PhueanTuenYa.app/embedded.mobileprovision ... 
+2026-06-06 14:10:53 +0000  16467 bytes for ./Payload/PhueanTuenYa.app/embedded.mobileprovision
+2026-06-06 14:10:53 +0000  copying file ./Payload/PhueanTuenYa.app/Info.plist ... 
+2026-06-06 14:10:53 +0000  1577 bytes for ./Payload/PhueanTuenYa.app/Info.plist
+2026-06-06 14:10:53 +0000  copying file ./Payload/PhueanTuenYa.app/PkgInfo ... 
+8 bytes for ./Payload/PhueanTuenYa.app/PkgInfo
+2026-06-06 14:10:53 +0000  copying file ./Symbols/E2171B8E-A2C7-38E0-AAF8-D99F51DF9FA4.symbols ... 
+2026-06-06 14:10:53 +0000  2327340 bytes for ./Symbols/E2171B8E-A2C7-38E0-AAF8-D99F51DF9FA4.symbols
+2026-06-06 14:10:53 +0000 [MT] /usr/bin/ditto exited with 0
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionAppStoreInformationStep
+2026-06-06 14:10:53 +0000 [MT] Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionGenerateProcessedDistributionItems
+2026-06-06 14:10:53 +0000 [MT] IDEDistributionItem init <DVTFilePath:0xa7cc1baa0:'/var/folders/sb/sm3zq6ls6dq1sckgbfphxl0w0000gn/T/XcodeDistPipeline.~~~l5Ttf4/Root/Payload/PhueanTuenYa.app'>
+2026-06-06 14:10:53 +0000 [MT] Processing step: IDEDistributionCreateManifestStep
+2026-06-06 14:10:53 +0000 [MT] Skipping step: IDEDistributionCreateManifestStep because it said so
